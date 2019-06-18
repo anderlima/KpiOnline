@@ -1,0 +1,26 @@
+body {
+	padding-top: 70px;
+}
+
+.main {
+	padding: 0px 0px;
+}
+
+.grayout {
+	background-color: #CCC;
+}
+
+.form-control-small {
+    width: 65;
+    display: inline;
+}
+
+.form-control-medium {
+    width: 180;
+    display: inline;
+}
+
+.form-control-large {
+    width: 400;
+    display: inline;
+}

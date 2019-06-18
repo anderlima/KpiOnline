@@ -1,0 +1,84 @@
+#!/bin/sh
+###########
+# Backup for kpionline
+# @script:	weeklyreportyear.sh
+# @author: 	Douglas Cristiano Alves
+# @mail:	dcalves@br.ibm.com
+# @ver:
+#	0.1	Initial version
+#	1.0	Stable with analysts necessities
+###########
+DATE=`/bin/date +%Y%m%d`
+YEAR=`/bin/date +%Y`
+DBPATH="/gdbr/kpionline/docs/kpionline.sqlite"
+#REC="dcalves@br.ibm.com,alimao@br.ibm.com,cbem@br.ibm.com,ibenatti@br.ibm.com,brunofl@br.ibm.com,jbpiton@br.ibm.com,ialamn@br.ibm.com,camita@br.ibm.com"
+#REC="dcalves@br.ibm.com,jbpiton@br.ibm.com,alimao@br.ibm.com,brunofl@br.ibm.com,dfpf@br.ibm.com,camita@br.ibm.com"
+REC="alimao@br.ibm.com"
+CREATION="/tmp/$DATE.kpionline.weeklyreport_watson.csv"
+CLOSURE="/tmp/$DATE.kpionline.weekly_closed_kpis_watson.csv"
+TMP="/tmp/$DATE.kpionline.weekly_TEMPORARY_ADSFADF.csv"
+MSG="/tmp/$DATE.kpionline_watson.msg"
+
+echo > $CREATION; echo > $CLOSURE; echo > $TMP; echo > $MSG;
+
+QUERY1="SELECT k.id as 'Ticket Num', replace(k.description,x'0D0A','') as 'Description', ca.name as 'Category', ca.description as 'Category Description', cu.name as 'Customer', s.type as 'Type', k.external_ticket as 'External Ticket', s.severity as 'Priority', k.bucket as 'Bucket', k.user_creator as 'User Creator', k.users_email as 'Assigned to', strftime('%Y-%m-%d', k.creation_date) as 'Creation Date', strftime('%H:%M:%S', k.creation_date) as 'Creation Time', strftime('%Y-%m-%d', k.closure_date) as 'Closure Date', strftime('%H:%M:%S', k.closure_date) as 'Closure Time', case k.status when 3 then 'Audit' when 0 then 'Closed' when 1 then 'Open' when 2 then 'Deleted' when 3 then 'Audit' end as 'Status', strftime('%m', k.creation_date) as 'Month', strftime('%w', k.creation_date) as 'Day of Week', strftime('%W', k.creation_date) as 'Week number', k.time_spent as 'Time Spent', k.num_server as 'Servers Qty' FROM kpis as k JOIN slas as s on k.slas_id=s.id JOIN categories as ca on k.categories_id=ca.id JOIN customers as cu on k.customers_code=cu.code JOIN tools as t on k.tools_id=t.id WHERE creation_date BETWEEN '$YEAR-01-01 00:00:00' AND date('now') AND k.status<=1;"
+
+QUERY2="SELECT k.id as 'Ticket Num', replace(k.description,x'0D0A','') as 'Description', ca.name as 'Category', ca.description as 'Category Description', cu.name as 'Customer', s.type as 'Type', k.external_ticket as 'External Ticket', s.severity as 'Priority', k.bucket as 'Bucket', k.user_creator as 'User Creator', k.users_email as 'Assigned to', strftime('%Y-%m-%d', k.creation_date) as 'Creation Date', strftime('%H:%M:%S', k.creation_date) as 'Creation Time', strftime('%Y-%m-%d', k.closure_date) as 'Closure Date', strftime('%H:%M:%S', k.closure_date) as 'Closure Time', case k.status when 3 then 'Audit' when 0 then 'Closed' when 1 then 'Open' when 2 then 'Deleted' when 3 then 'Audit' end as 'Status', strftime('%m', k.creation_date) as 'Month', strftime('%w', k.creation_date) as 'Day of Week', strftime('%W', k.creation_date) as 'Week number', k.time_spent as 'Time Spent', k.num_server as 'Servers Qty' FROM kpis as k JOIN slas as s on k.slas_id=s.id JOIN categories as ca on k.categories_id=ca.id JOIN customers as cu on k.customers_code=cu.code JOIN tools as t on k.tools_id=t.id WHERE creation_date BETWEEN '$YEAR-01-01 00:00:00' AND date('now') AND k.status=0;"
+
+echo "Ticket Num|Description|Category|Category Description|Customer|Type|External Ticket|Priority|Bucket|User Creator|Assigned to|Creation Date|Creation Time|Closure Date|Closure Time|Status|Month|Day of Week|Week Number|Time Spent|Servers Qty" > $TMP
+/bin/echo $QUERY1 | /usr/bin/sqlite3 $DBPATH | while read LINE
+do
+	PRE=`echo $LINE | cut -d'|' -f1`;
+	DESC=`echo $LINE | cut -d'|' -f2`;
+	SUF=`echo $LINE | cut -d'|' -f3-`;
+	DESC=`echo $DESC | /bin/sed "s/[^a-Z|0-9| ]//g"`
+	echo "$PRE|$DESC|$SUF" >> $TMP
+done
+
+DESC=
+cat $TMP | while read LINE
+do
+	for ((i=1;i<=21;i++))
+	do 
+		INF=`echo $LINE | cut -d'|' -f"$i"`
+		if [ $i = 1 ]; then DESC="\"$INF\""
+		else DESC="$DESC,\"$INF\""; fi
+	done
+	echo $DESC >> $CREATION
+done
+# /bin/sed "s/|/;/g" $TMP > $CREATION
+
+echo "Ticket Num|Description|Category|Category Description|Customer|Type|External Ticket|Priority|Bucket|User Creator|Assigned to|Creation Date|Creation Time|Closure Date|Closure Time|Status|Month|Day of Week|Week Number|Time Spent|Servers Qty" > $TMP
+/bin/echo $QUERY2 | /usr/bin/sqlite3 $DBPATH | while read LINE
+do
+	PRE=`echo $LINE | cut -d'|' -f1`;
+	DESC=`echo $LINE | cut -d'|' -f2`;
+	SUF=`echo $LINE | cut -d'|' -f3-`;
+	DESC=`echo $DESC | /bin/sed "s/[^a-Z|0-9| ]//g"`
+	echo "$PRE|$DESC|$SUF" >> $TMP
+done
+
+DESC=
+cat $TMP | while read LINE
+do
+	for ((i=1;i<=21;i++))
+	do 
+		INF=`echo $LINE | cut -d'|' -f"$i"`
+		if [ $i = 1 ]; then DESC="\"$INF\""
+		else DESC="$DESC,\"$INF\""; fi
+	done
+	echo $DESC >> $CLOSURE
+done
+#/bin/sed "s/|/;/g" $TMP > $CLOSURE
+
+echo "Weekly report with year information for watson usage." > $MSG
+
+/bin/mail -s "[$DATE] KPIONLINE - Weekly report (Sat to Fri) for Watson" -a $CREATION -a $CLOSURE  "$REC" < $MSG
+
+rm -f $CREATION
+rm -f $CLOSURE
+rm -f $MSG
+
+#EOF
+
+

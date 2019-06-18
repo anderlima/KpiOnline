@@ -1,0 +1,58 @@
+body {
+	padding-top: 50px;
+}
+
+.main {
+	padding: 0px 0px;
+}
+
+.grayout {
+	background-color: #CCC;
+}
+
+.form-control-small {
+    width: 65;
+    display: inline;
+}
+
+.form-control-medium {
+    width: 180;
+    display: inline;
+}
+
+.form-control-large {
+    width: 400;
+    display: inline;
+}
+
+#logo {
+	height: 38px;
+	width: 100px;
+}
+
+.chpwd {
+	width: 40%;
+}
+
+.table > tbody > tr > td {
+     vertical-align: middle;
+}
+
+select[readonly] {
+  background: #eee;
+  pointer-events: none;
+  touch-action: none;
+}
+
+.nav>li.nohov>a:hover, .nav>li.nohov>a:focus {
+  background-color: transparent;
+}
+
+#cont {
+  text-align: center;
+}
+
+.block {
+    display: inline-block;
+}
+

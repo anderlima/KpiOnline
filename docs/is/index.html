@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>is_status</title>
+    <meta http-equiv="refresh" content="300">
+     <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+    <!-- ie6/7 micro clearfix -->
+    <!--[if lte IE7]>
+        <style>
+            .grouping {
+                *zoom:1;
+            }
+        </style>
+        <![endif]-->
+    <!--[if IE]>
+            <script src="http://html5.googlecode.com/svn/truno/html5.js></script>-->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper-tit">
+
+            <div class="column0"></div>
+            <div class="column0"></div>
+            <div class=".column1">
+                <img #ibm alt="IBM_LOGO" src="ibmlogo_w.png">
+            </div>
+            <div class="column0"></div>
+            <div class="column0"></div>
+            <div class="column2">
+
+                <div id=text>
+                    <h1>Integration Service Status page</h1>
+                    <br>
+                    <ul>
+                       <li><b>Monitored systems</b>
+			 <li>EADS GR Netcool in Raleigh (RTP) - BR</li>
+			<li>Ameriprise Netcool</li>
+                    </ul>
+		<br> Last update:
+<b>2019-03-27 09:10</ul>
+<br>Autorefresh is <b>on</b></div>
+            </div>
+
+        </div>
+
+        <center>
+
+                <div style="width: 400px; align-content: center; padding: 10px;">
+                    <table class="separate" id="NetcoolStatus" style="text-align: left; width: 100%; height: 154px;" border="0" cellpadding="1" cellspacing="1">
+                    <tbody>
+                        <tr class="header">
+                            <th class="t-header">NETCOOL ENVIRONMENT
+                            </th>
+                            <th style="vertical-align: top; text-align: center; background-color: rgb(83, 129, 195);">E2E ERROR COUNT
+                            </th>
+                            </th>
+                            <th style="vertical-align: top; text-align: center; background-color: rgb(83, 129, 195);">LAST CHECK
+                            </th>
+
+<tr>
+                            <td style="vertical-align: middle;">Shared Netcool<br>
+                            </td>
+                            <td style="vertical-align: middle;">0<br>
+                            </td>
+                            </td>
+                            <td style="vertical-align: middle;">201903250845<br>
+                            </td>
+    </tr>
+
+<tr>
+                            <td style="vertical-align: middle;">Ameriprise Netcool<br>
+                            </td>
+                            <td style="vertical-align: middle;">0<br>
+                            </td>
+                            </td>
+                            <td style="vertical-align: middle;">201903270900<br>
+                            </td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+            <div style="width: 800px; align-content: center; padding: 10px;">
+                <input style="width: 100%;" type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for customer">
+            </div>
+
+            <div id="content">
+                <table class="separate" id="isStatus" style="text-align: left; width: 100%; height: 154px;" border="0" cellpadding="1" cellspacing="1">
+                    <tbody>
+                        <tr class="header">
+                            <th class="t-header">CUSTOMER
+                            </th>
+                            <th style="vertical-align: top; text-align: center; background-color: rgb(83, 129, 195);">IPMS
+                            </th>
+                            <th style="text-align: center; vertical-align: middle; background-color: rgb(83, 129, 195);">POSTING URL
+                            </th>
+                            <th style="text-align: center; vertical-align: middle; background-color: rgb(83, 129, 195);">CALLBACK URL
+                            </th>
+                            <th style="text-align: center; vertical-align: middle; background-color: rgb(83, 129, 195);">STATUS
+                            </th>
+                            <th style="text-align: center; vertical-align: middle; background-color: rgb(83, 129, 195);">CALLBACK
+                            </th>
+                        </tr>
+
+<tr>
+                            <td style="vertical-align: middle;">amp<br>
+                            </td>
+                            <td style="vertical-align: middle;">SN_AMP_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/servicenow/amp/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/servicenow/amp/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">azf azl bhi ccc cpc de1 flr iau icc lmi lor mis mlr nas pac prs<br>
+                            </td>
+                            <td style="vertical-align: middle;">IPSOFT_ETS_PROD<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.179/EnVision-STEC-1/ets/ipsoft/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.179/EnVision-STEC-1/ets/ipsoft/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">cpc fmc gdv ku png syz iau lmi nas pac<br>
+                            </td>
+                            <td style="vertical-align: middle;">SCCD_SHAREDGR_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/gr/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/gr/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">dhz hmc nnw srs<br>
+                            </td>
+                            <td style="vertical-align: middle;">IPSOFT_SHR_IS1INTA8<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.209.16/EnVision-STEC-1/ets/ipsoft/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.209.16/EnVision-STEC-1/ets/ipsoft/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">bgg eim<br>
+                            </td>
+                            <td style="vertical-align: middle;">SCCD_SHAREDNGR_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/ngr/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/ngr/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="NOK" src="NOK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">cl2 fsg lor mis mva smt<br>
+                            </td>
+                            <td style="vertical-align: middle;">SOTC_SHAREDGR_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sotc/gr/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sotc/gr/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="NOK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">acr<br>
+                            </td>
+                            <td style="vertical-align: middle;">IPSOFT_APIE_ACR_PROD<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72/rest/api/service/instances/acr_netcool_listener</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72/rest/api/service/instances/acr_netcool_callback/responder</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">acr<br>
+                            </td>
+                            <td style="vertical-align: middle;">SCCD_ABCR_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.209.16/tdi/sccd/avis/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.209.16/tdi/sccd/avis/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">afs<br>
+                            </td>
+                            <td style="vertical-align: middle;">SCCD_AFS_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/afs/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/afs/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="NOK" src="NOK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">bgg<br>
+                            </td>
+                            <td style="vertical-align: middle;">SN_BGG_PROD_API<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72:443/rest/api/service/instances/shell_netcool_listener</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72:443/rest/api/service/instances/shell_callback/responder</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">bhi<br>
+                            </td>
+                            <td style="vertical-align: middle;">CA_BHI_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.166/tdi/ca/bhi/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.166/tdi/ca/bhi/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="NOK" src="NOK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">de1<br>
+                            </td>
+                            <td style="vertical-align: middle;">SN_DE_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/de/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/de/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">dfs<br>
+                            </td>
+                            <td style="vertical-align: middle;">IPSOFT_APIE_DFS_PROD<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72/rest/api/service/instances/dfs_netcool_listener</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72/rest/api/service/instances/dfs_netcool_callback/responder</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="NOK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="NOK" src="NOK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">dhz<br>
+                            </td>
+                            <td style="vertical-align: middle;">SN_DELHAIZE_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/delhaize/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/delhaize/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">eso<br>
+                            </td>
+                            <td style="vertical-align: middle;">HPSM_AES_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.166/tdi/hpsm/aes/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.166/tdi/hpsm/aes/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">gbt<br>
+                            </td>
+                            <td style="vertical-align: middle;">SN_GBT_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/aegbt/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/aegbt/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="NOK" src="NOK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">hmc<br>
+                            </td>
+                            <td style="vertical-align: middle;">SN_HON_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/honda/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/honda/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">icc<br>
+                            </td>
+                            <td style="vertical-align: middle;">SERVICENOW_ICCE_PROD_ETS<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/coke/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/coke/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">mva<br>
+                            </td>
+                            <td style="vertical-align: middle;">IPSOFT_APIE_MVA_PROD<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72/rest/api/service/instances/mva_netcool_listener</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://158.87.22.72/rest/api/service/instances/mva_netcool_callback/responder</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">prs<br>
+                            </td>
+                            <td style="vertical-align: middle;">SN_PEARSON_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/pearson/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://170.225.28.217/tdi/servicenow/pearson/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+<tr>
+                            <td style="vertical-align: middle;">flr<br>
+                            </td>
+                            <td style="vertical-align: middle;">SCCD_FLU_PROD_TDI<br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/flu/prod</small>
+                                <br>
+                            </td>
+                            <td style="vertical-align: middle;">
+
+                                <small>https://167.210.249.178/tdi/sccd/flu/prod</small>
+                                <br>
+                            </td>
+<td style="vertical-align: top; text-align: center;">
+                                <img style="width: 28px; height: 28px;" alt="OK-NOK" src="OK.png" align="middle"> </td>
+<td style="vertical-align: top; text-align: center;"><img style="width: 28px; height: 28px;" alt="OK" src="OK.png" align="middle"> </td>
+</tr>
+ </tbody>
+                </table>
+            </div>
+            <div class="footer">
+The callback possible status are: OK (callback is up to 5hs old), NOK (callback is older than 5hs), MISSING (callback file not found)<br><br>
+                The IS connections marked with red flag are with issues, if needed:
+                <br> - Report IS issues through
+                <a href="http://ibmurl.hursley.ibm.com/O6TT">this link</a>
+                <br> - Open SNI ticket through
+                <a href="http://ibmurl.hursley.ibm.com/OEYL">this link </a>(if connection is failing to IS destination)
+                <br>
+                <br> Netcool team can be engaged through Sametime, contact ieaubr4@br.ibm.com.
+            </div>
+
+        </center>
+    </div>
+    <script>
+        function searchFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("isStatus");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who dont match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+

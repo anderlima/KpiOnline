@@ -1,0 +1,250 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    align-content: center;
+    
+}
+/* reset end */
+
+/* Micro clear fix */
+.grouping:before, .grouping:after{
+    content: " ";
+    display: table;
+}
+.grouping:after{
+    clear: both;
+}
+
+img, iframe, video, object{
+    max-width: 100%;
+}
+
+strong, b{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 120%;
+}
+.wrapper{
+    width: 1200;
+}
+
+.wrapper-tit{
+    /* width: 90%; */
+    display: flex;
+    margin: 0 auto;
+    width: 1024px;
+    flex-wrap: nowrap | wrap | wrap-reverse;
+
+    padding-top: 30px;
+    Height: 130px;
+   
+    margin: 0px, 0px, 0px, 0px;
+    border: 0px;
+    width: 100% !important;
+    
+    background-color: rgb(83, 129, 195);
+    padding-bottom: 20px;
+}
+
+.column0{
+    float: left;
+    width: 70px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.column1{
+    float: left;
+    width: 400px;
+    margin-left: 20px;
+    vertical-align: middle;
+    
+}
+.column2{
+    float: left;
+    width: auto;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+.column2 .text{
+    vertical-align: middle;
+    
+}
+li{
+    text-indent: 30px;
+}
+#ibm {
+
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:20px;
+}
+.head-tit .logo{
+    float: left;
+    width: 260px;   
+}
+.head-tit .title{
+    float: right;
+    width: 720px;
+}
+input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+#searchInput {
+   
+    width: 80%;
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #d6e5ff; 
+    margin-bottom: 12px;
+    border-radius: 32px;
+}
+
+.t-header {
+    text-align: center; vertical-align: middle; background-color: rgb(83, 129, 195);
+}
+
+
+table.separate {  padding: 20px; border-radius: 10px; margin: 10px; border-spacing: 0; border-collapse: separate; }
+
+table.separate td, table.separate th {  padding: 5px 12px; border-bottom: 1px solid rgb(83, 129, 195); border-right: 1px solid rgb(83, 129, 195); }
+table.separate th { background: rgb(83, 129, 195); color: white; }
+
+table.separate tr:last-child td:first-child {
+    border-bottom-left-radius:10px;
+}
+
+table.separate tr:last-child td:last-child {
+    border-bottom-right-radius:10px;
+}
+
+table.separate tr th:first-child,
+table.separate tr td:first-child {
+   border-left: 1px solid rgb(83, 129, 195);
+}
+
+table.separate tr:first-child th,
+table.separate tr:first-child td {
+   border-top: 1px solid rgb(83, 129, 195);
+}
+
+table.separate tr:first-child th:first-child,
+table.separate tr:first-child td:first-child {
+    border-top-left-radius:10px;
+}
+
+table.separate tr:first-child th:last-child,
+table.separate tr:first-child td:last-child {
+    border-top-right-radius:10px;
+}
+
+
+
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(231, 231, 255);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+td {
+    padding-left: 12px;
+    padding-right: 12px;
+    word-wrap: break-word !important;
+}
+
+td:first-child, th:first-child {
+    border-left: none;
+}
+
+th {
+    border-top: none;
+}
+
+.wrapper{
+    margin: 20px, 20px,20px,20px;
+}
+#content{
+    width: 95%;
+    align-self: center;
+}
+#text{ color: #fff;}
+.footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: rgb(83, 129, 195);
+    text-align: center;
+    width: 100% !important;
+	position: static;
+	color: #fff;
+    line-height: rem(40px);
+    bottom: 0;
+}
+
+*{
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif !important;
+}
